@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Login page</title>
+</head>
+<body>
+    <h1>Welcome to Wendy's!</h1>
+    <form action="">
+        <p><label for="Username">Username</label>
+        <input type="text" name="Username" id="Username"></p>
+        <p><label for="Password">Password</label>
+        <input type="password" name="Password" id="Password"></p>
+    </form>
+    <button id="Login" onclick="save()">Log in</button>
+    <script>
+        function save(){
+            let User = document.getElementById("Username").value;
+            let Password = document.getElementById("Password").value;
+            
+            localStorage.setItem("Username", User);
+            localStorage.setItem("Password", Password);
+        }
+    </script>
+</body>
+</html>
