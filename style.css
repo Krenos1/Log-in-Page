@@ -1,4 +1,13 @@
 body
 {
-    background-image: url(Log-in-Page/forest_mountains_sunset_cool_weather_minimalism.jpg);
+    background-image: url(forest_mountains_sunset_cool_weather_minimalism.jpg);
+}
+.container{
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+
 }
