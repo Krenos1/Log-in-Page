@@ -35,17 +35,23 @@ function AjoutTache() {
         Sauvegarde(TexteTache);
         InputTache.value = "";
         //Ajout de boutton de suppression à chaque élément de liuste
+        const BtnModifier = document.createElement("button");
         const BtnSuprrimer = document.createElement("button");
-        // BtnModifier.textContent = "Modifier";
+
+        BtnModifier.textContent = "Modifier";
+        ListeItem.appendChild(BtnModifier)
+        BtnModifier.addEventListener("click",  );
+
         BtnSuprrimer.textContent = "Supprimer";
-        
         ListeItem.appendChild(BtnSuprrimer);
 
         BtnSuprrimer.addEventListener("click", () => {
             ListeItem.remove();
         });
 
-        
+function Modification () {
+    ListeItem.textcontent = 
+}     
 
 
     } else {
