@@ -3,28 +3,43 @@ const InputTache = document.getElementById("InputTache");
 const BtnAjoutTache = document.getElementById("BtnAjoutTache");
 const ListeDeTache = document.getElementById("ListeDeTache");
 //Constante de la page de LOG IN
-const Username = document.getElementById("Username");
-const Password = document.getElementById("Password");
+const inputUsername = document.getElementById("Username");
+const inputPassword = document.getElementById("Password");
+
+const sofiane = "";
+const Scott = "";
+
+
 var task = "ListeTache";
 var i = 0;
 
 BtnAjoutTache.addEventListener("click", AjoutTache);
 
+//Fonction sur la page Sign up
 function save(){
-    if (Username !== ""){
-    User = Username.value
-    localStorage.setItem("Username", User);
-    
-    localStorage.setItem("Password", Password);
-    window.location.href = "Accueil.html";
+    const SaveUser = inputUsername.value;
+    const SavePassword = inputPassword.value;
+    //Assigne des constante pour sauvegarder le nom d'utilisateur et le mot de pase de l'utilisateur, Ensuite mettre dans local storage
+    if (SaveUser!== "" || SavePassword !== ""){
+    localStorage.setItem("Username1" + SaveUser, SaveUser);
+    localStorage.setItem("Password1" + SaveUser, SavePassword);
+    alert(sofiane + Scott);
     }
     else{
-        alert("Veuillez entrer un nom d'utilisateur valide");
+        alert("Veuillez entrer un nom d'utilisateur valide ou un mot de passe valide.1");
+    }
+}
+function Login(){
+    const Username = inputUsername.value;
+    const Password = inputPassword.value;
+    if (Username == localStorage.getItem("Username1" + Username) && Password == localStorage.getItem("Password1" + Username)){
+        window.location.href = "Accueil.html";
+    }
+    else{
+        alert("Veuillez entrer un nom d'utilisateur valide ou un mot de passe valide.2");
     }
 }
 
-let Bienvenue = document.getElementById("Welcome")
-Bienvenue.innerHTML = "Bienvenue " + localStorage.getItem("Username") + " Chez Air Canada"
 
 function AjoutTache() {
     const TexteTache = InputTache.value.trim();
@@ -50,7 +65,7 @@ function AjoutTache() {
         });
 
 function Modification () {
-    ListeItem.textcontent = 
+    ListeItem.textcontent = 3131
 }     
 
 
@@ -67,4 +82,11 @@ function Sauvegarde(TexteTache) {
 function Restaurer() {
     let texte = localStorage.getItem("ListeTache");
     document.getElementById("ListeDeTache").innerHTML = texte;
+}
+function affiche(){
+   
+    const User = localStorage.getItem(Username1.concat(Username));
+    document.getElementById('Welcome').innerHTML = User;
+    
+    alert("User");
 }
