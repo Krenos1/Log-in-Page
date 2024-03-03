@@ -14,14 +14,23 @@
         <p><label for="Password">Password</label>
         <input type="password" name="Password" id="Password"></p>
     </form>
-    <!-- <form id="signup">
-        <p><label for="Username">Username</label>
-        <input type="text" name="Username" id="Username"></p>
-        <p><label for="Password">Password</label>
-        <input type="password" name="Password" id="Password"></p>
-    </form> -->
-    <button id="Login" onclick="Login()">Log in</button>
-    <button id="signup" onclick="save()">Sign Up</button>
+    <button id="loginBtn" onclick="Login()">Log in</button>
+    <button id="showSignupBtn" onclick="showSignupForm()">Sign Up</button>
+
+    <!-- Boîte modale pour le formulaire d'inscription -->
+    <div id="signup" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignupForm()">&times;</span>
+            <form id="signup">
+                <p><label for="NewUsername">New Username</label>
+                <input type="text" name="NewUsername" id="NewUsername"></p>
+                <p><label for="NewPassword">New Password</label>
+                <input type="password" name="NewPassword" id="NewPassword"></p>
+                <button id="signupBtn" onclick="save()">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
     <script src="Javascript.js"></script>
 </body>
 </html>
